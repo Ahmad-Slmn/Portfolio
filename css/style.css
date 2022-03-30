@@ -1,0 +1,97 @@
+/* Start My Frame Work */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize
+}
+
+
+
+input{outline: none}
+
+a{text-decoration: none}
+
+
+:root{
+    --prim: #edf2fc;
+    --secen: #212121;
+     --trans: .4s;
+}
+
+.drakmode{
+    
+    --prim: #000106;
+    --secen: #fff
+}
+
+/* End My Frame Work */
+
+/* Strat Header */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--prim);
+    font-family: sans-serif;
+    position: relative
+}
+
+header nav{
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+header nav > img {width: 100px}
+
+header nav ul{flex: 1; text-align: right}
+
+header nav ul li {display: inline-block; margin: 10px 20px; font-weight: bold}
+
+header nav ul li a {color: var(--secen); transition-duration: var(--trans)}
+
+header nav ul li a:hover {color: #ff4321}
+
+header nav i{font-size: 25px; cursor: pointer; color: var(--secen)}
+
+header .info{
+    margin-left: 8%;
+    margin-top: 15%
+}
+
+header .info h1{font-size: 70px; color: var(--secen); margin-bottom: 20px}
+
+header .info h1 span{color: #ff4321}
+
+header .info p{color: var(--secen); line-height: 25px}
+
+header .info > a{
+    background-color: var(--secen);
+    padding: 10px 20px;
+    color: var(--prim);
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 6px
+}
+
+header .img-box{width: 45%;height: 80%;position: absolute; bottom: 0;right: 100px}
+
+header .img-box img{height: 100%; position: absolute;left: 50%;bottom: 0; transform: translateX(-50%); transition-duration: var(--trans)}
+
+header .img-box:hover img:first-of-type{bottom: 40px}
+
+header .img-box:hover img:last-of-type{left: 55%}
+
+header .social-links {margin-left: 8%; margin-top: 100px}
+
+header .social-links a{font-size: 30px; color:var(--secen); margin-right: 20px; transition-duration: var(--trans)}
+
+header .social-links a:hover{color:#ff4331}
+/* End Header*/
+
+
