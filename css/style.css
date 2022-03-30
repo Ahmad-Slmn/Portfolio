@@ -176,6 +176,7 @@ header nav ul li a:hover {
 
 /* End Landing*/
 
+
 @media(max-width:576px) {
 
     main {
@@ -199,6 +200,13 @@ header nav ul li a:hover {
         margin: 0
     }
 
+}
+
+@media(max-width:330px){
+    
+    #icun {
+        right: 150px !important
+    }
 }
 
 @media(min-width:570px) and (max-width:680px) {
