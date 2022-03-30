@@ -184,7 +184,7 @@ header nav ul li a:hover {
     }
 
     #icun {
-        right: 172px !important
+        right: 160px !important
     }
 
     .landing {
@@ -212,7 +212,7 @@ header nav ul li a:hover {
 @media(min-width:570px) and (max-width:680px) {
 
     #icun {
-        right: 160px !important
+        right: 172px !important
     }
 }
 
