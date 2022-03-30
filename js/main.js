@@ -8,6 +8,8 @@ links.forEach(ele => {
 
     ele.addEventListener("click", function (e) {
 
+        document.querySelector("nav").classList.toggle("hidemenu")
+
         e.preventDefault()
     })
 })
@@ -26,7 +28,15 @@ if (mylocal !== null) {
     }
 }
 
+document.querySelector(".fa-bars").onclick = function () {
+
+    document.querySelector("nav").classList.toggle("hidemenu")
+}
+
+
 icun.onclick = function () {
+
+    document.querySelector("nav").classList.toggle("hidemenu")
 
     this.classList.toggle("fa-sun")
 
@@ -42,4 +52,3 @@ icun.onclick = function () {
         localStorage.setItem("mode", "light-mode")
     }
 }
-

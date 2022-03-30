@@ -1,5 +1,5 @@
 /* Start My Frame Work */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,68 +9,120 @@
 
 
 
-input{outline: none}
-
-a{text-decoration: none}
-
-
-:root{
-    --prim: #edf2fc;
-    --secen: #212121;
-     --trans: .4s;
+input {
+    outline: none
 }
 
-.drakmode{
-    
+a {
+    text-decoration: none
+}
+
+body {
+    background-color: var(--prim);
+    font-family: sans-serif
+}
+
+
+:root {
+    --prim: #edf2fc;
+    --secen: #212121;
+    --trans: .4s;
+}
+
+.drakmode {
+
     --prim: #000106;
     --secen: #fff
+}
+
+.fa-bars {
+    display: none !important;
+    color: var(--secen)
+}
+
+main {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden
+}
+
+#icun {
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--secen);
+    position: absolute;
+    top: 6px;
+    right: -15px;
+    transition: var(--trans)
 }
 
 /* End My Frame Work */
 
 /* Strat Header */
-
-header{
+header {
     width: 100%;
-    height: 100vh;
-    background-color: var(--prim);
-    font-family: sans-serif;
-    position: relative
+    height: 72px;
+    position: relative;
+    display: flex;
+    justify-content: space-between
 }
 
-header nav{
-    width: 100%;
-    margin: auto;
-    padding: 0 20px;
+header small {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    width: fit-content;
+    color: #ff4321
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 10px 15px;
+    font-weight: bold
+}
+
+header nav ul li a {
+    color: var(--secen);
+    transition-duration: var(--trans)
+}
+
+header nav ul li a:hover {
+    color: #ff4321
+}
+
+/* End Header*/
+
+/* Start Landing*/
+.landing {
+    height: calc(100vh - 72px);
+    overflow: hidden;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center
 }
 
-header nav > img {width: 100px}
-
-header nav ul{flex: 1; text-align: right}
-
-header nav ul li {display: inline-block; margin: 10px 20px; font-weight: bold}
-
-header nav ul li a {color: var(--secen); transition-duration: var(--trans)}
-
-header nav ul li a:hover {color: #ff4321}
-
-header nav i{font-size: 25px; cursor: pointer; color: var(--secen)}
-
-header .info{
-    margin-left: 8%;
-    margin-top: 15%
+.landing .info {
+    z-index: 1
 }
 
-header .info h1{font-size: 70px; color: var(--secen); margin-bottom: 20px}
+.landing .info h1 {
+    font-size: 70px;
+    color: var(--secen);
+    margin-bottom: 20px
+}
 
-header .info h1 span{color: #ff4321}
+.landing .info h1 span {
+    color: #ff4321
+}
 
-header .info p{color: var(--secen); line-height: 25px}
+.landing .info p {
+    color: var(--secen);
+    line-height: 25px
+}
 
-header .info > a{
+.landing .info > a {
     background-color: var(--secen);
     padding: 10px 20px;
     color: var(--prim);
@@ -79,19 +131,156 @@ header .info > a{
     border-radius: 6px
 }
 
-header .img-box{width: 45%;height: 80%;position: absolute; bottom: 0;right: 100px}
+.landing .img-box {
+    width: 45%;
+    height: 80%;
+    position: relative;
+    top: 0;
+    right: 0
+}
 
-header .img-box img{height: 100%; position: absolute;left: 50%;bottom: 0; transform: translateX(-50%); transition-duration: var(--trans)}
+.landing .img-box img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition-duration: var(--trans)
+}
 
-header .img-box:hover img:first-of-type{bottom: 40px}
+.landing .img-box:hover img:first-of-type {
+    bottom: 40px
+}
 
-header .img-box:hover img:last-of-type{left: 55%}
+.landing .img-box:hover img:last-of-type {
+    left: 55%
+}
 
-header .social-links {margin-left: 8%; margin-top: 100px}
+/*
+.landing .social-links {
+    margin-left: 8%;
+    margin-top: 100px
+}
+*/
 
-header .social-links a{font-size: 30px; color:var(--secen); margin-right: 20px; transition-duration: var(--trans)}
+.landing .social-links a {
+    font-size: 30px;
+    color: var(--secen);
+    margin-right: 20px;
+    transition-duration: var(--trans)
+}
 
-header .social-links a:hover{color:#ff4331}
-/* End Header*/
+.landing .social-links a:hover {
+    color: #ff4331
+}
+
+/* End Landing*/
+
+@media(max-width:576px) {
+
+    main {
+        max-width: 540px
+    }
+
+    #icun {
+        right: 172px !important
+    }
+
+    .landing {
+        flex-direction: column
+    }
+
+    .landing .info {
+        margin-top: 25px
+    }
+
+    .landing .info h1 {
+        font-size: 30px;
+        margin: 0
+    }
+
+}
+
+@media(min-width:570px) and (max-width:680px) {
+
+    #icun {
+        right: 172px !important
+    }
+}
+
+@media(max-width:767px) {
+
+    header nav {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        display: inline-block;
+        width: 100%;
+        padding: 80px 7% 0;
+        max-height: 80px;
+        overflow: hidden;
+        transition: max-height .5s;
+        text-align: center;
+        background: var(--prim)
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: right;
+        display: flex
+    }
+
+    header nav ul li {
+        padding: 0
+    }
+
+    header nav ul li a {
+        padding: 10px 0;
+        font-size: 20px
+    }
+
+    header small {
+        position: fixed;
+        top: 3%;
+        left: 2%;
+        z-index: 9
+    }
+
+    .fa-bars {
+        display: block !important;
+        z-index: 2;
+        position: fixed;
+        top: 4%;
+        right: 2%;
+        font-size: 25px;
+        cursor: pointer
+    }
+
+    #icun {
+        position: relative;
+        top: -200px;
+        right: 320px
+    }
+
+    .hidemenu {
+        max-height: 375px !important
+    }
+}
 
 
+@media(min-width:768px) {
+
+    main {
+        min-width: 720px
+    }
+
+
+}
+
+@media(min-width:992px) {
+
+    main {
+        min-width: 960px
+    }
+
+}
